@@ -250,7 +250,7 @@ const HomePage: FC = () => {
               Master Modern Life Through Thoughtful Living
             </h2>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Practical insights for personal growth, wellness, and intentional living in today's fast-paced world.
+              Practical insights for personal growth, wellness, and intentional living in today`&apos;`s fast-paced world.
             </p>
             <a
               href="#blog-section"
@@ -299,7 +299,7 @@ const HomePage: FC = () => {
               {/* Search Results Info */}
               {searchQuery && (
                 <div className="mb-6 p-4 bg-indigo-50 rounded-lg text-indigo-800">
-                  Showing {filteredPosts.length} results for "{searchQuery}"
+                  Showing {filteredPosts.length} results for `&quot;`{searchQuery}`&quot;`
                 </div>
               )}
 
