@@ -6,6 +6,13 @@ const space = process.env.CONTENTFUL_SPACE_ID;
 const previewKey = process.env.CONTENTFUL_PREVIEW_TOKEN;
 const environment = process.env.CONTENTFUL_ENV || 'master';
 
+// Debug logging (only on the server)
+if (typeof window === 'undefined') {
+  console.log('[Contentful] SPACE:', space);
+  console.log('[Contentful] TOKEN:', previewKey ? 'defined' : 'undefined');
+  console.log('[Contentful] ENVIRONMENT:', environment);
+}
+
 if (!space || !previewKey) {
   throw new Error('Missing Contentful environment variables. Check .env.local file for CONTENTFUL_SPACE_ID and CONTENTFUL_PREVIEW_TOKEN.');
 }
